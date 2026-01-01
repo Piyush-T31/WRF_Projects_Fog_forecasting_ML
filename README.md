@@ -99,6 +99,11 @@ ML post-processing improved F1-score by:
 
 relative to WRF liquid-water-based fog detection.
 
+![Confusion matrices for ETClassifier and WRF 2024](https://github.com/Piyush-T31/WRF_Projects_Fog_forecasting_ML/blob/c73c68efc6729aba815f25ba815b95031fdf229c/Paper_Figures/Paper_figure/confusion_matrices.png)
+
+- Confusion matrices comparing ETClassifier and WRF-only fog detection at St John’s and Yarmouth (2024).
+- ETClassifier reduces false alarms and increases fog detection skill compared to WRF-only diagnostics at both sites.
+
 ---
 
 ## 📈 Key Results
@@ -125,7 +130,7 @@ This work positions ML as a **bias-correction tool**, not a replacement for phys
 ```text
 fog-ml-wrf/
 ├── era5 data/Binary    # era5 data collected for both locations
-├── 2024_test./    # 2024 forecasted features for both locations
+├── 2024_test/    # 2024 forecasted features for both locations
 ├── WRF_Files/    # configurations used for preprocessing ERA5 data and running WRF + extracting the variables
 ├── ML_scripts/
 │   ├── fogtest_decisiontree.py    # preprocessing and training models (ETClassifier) + evaluating metrics
