@@ -67,6 +67,7 @@ Tree-based ensemble methods were found to be more robust and interpretable than 
 
 - Preprocessed ERA5 data to downscale to 9 km to match the WRF simulations for more accurate comparisons.
 - 2-nested domain used for WRF Simulations (do1=27 km, do2=9km).
+- Used NCL to extract the features used from the ERA5 dataset and WRF (get_variable.ncl).
 ---
 
 ## 🧩 Feature Engineering
