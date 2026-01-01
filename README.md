@@ -63,6 +63,10 @@ Tree-based ensemble methods were found to be more robust and interpretable than 
 * Initialized using **GFS 0.25° forecasts**
 * 36 h daily runs with 12 h spin-up
 
+![2-nested domain used to run WRF with d02 at 9 km resolution](https://github.com/Piyush-T31/WRF_Projects_Fog_forecasting_ML/blob/ee0d8e877f81b2a697f382f1df885406949bf1e9/Paper_Figures/Paper_figure/Figure%201.png)
+
+- Preprocessed ERA5 data to downscale to 9 km to match the WRF simulations for more accurate comparisons.
+- 2-nested domain used for WRF Simulations (do1=27 km, do2=9km).
 ---
 
 ## 🧩 Feature Engineering
@@ -120,12 +124,13 @@ This work positions ML as a **bias-correction tool**, not a replacement for phys
 
 ```text
 fog-ml-wrf/
-├── data/
-├── WRF_Files/   # configurations used for preprocessing ERA5 data and running WRF + extracting the variables
-├── Python_scripts/
-│   ├── extratrees.py        # preprocessing and training models (ETClassifier) + evaluating metrics
-│   └── bilstm.py       # Using neural nets as another option
-├── Paper_figures/  # contains all the plots used in manuscript
+├── era5 data/Binary    # era5 data collected for both locations
+├── 2024_test./    # 2024 forecasted features for both locations
+├── WRF_Files/    # configurations used for preprocessing ERA5 data and running WRF + extracting the variables
+├── ML_scripts/
+│   ├── fogtest_decisiontree.py    # preprocessing and training models (ETClassifier) + evaluating metrics
+│   └── fogtest_neural.py    # Using neural nets as another option
+├── Paper_figures/    # contains all the plots used in manuscript
 └── README.md
 ```
 
